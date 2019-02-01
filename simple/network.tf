@@ -4,8 +4,8 @@ module "vcn" {
   version = "1.0.1"
   compartment_ocid = "${var.compartment_ocid}"
   vcn_display_name = "${var.vcn_display_name}"
-  # vvv isn't applyable because we're using a module not a a resource
-  #freeform_tags = {"Deployment"="TF", "Publisher"="Neo4J", "Offer"="neo4j-enterprise"}
+  # vvv isn't applyable because we're using a module not a resource
+  #freeform_tags = {"Deployment":"TF", "Publisher":"Neo4J", "Offer":"neo4j-enterprise"}
 }
 
 resource "oci_core_security_list" "oci_core_default_security_list" {

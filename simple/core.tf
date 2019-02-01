@@ -28,7 +28,7 @@ resource "oci_core_instance" "core" {
       file("../scripts/core.sh")
     )))}"
   }
-  freeform_tags = {"Quickstart"="{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\"=\"byol\"}","otherTagKey"="otherTagVal"}
+  freeform_tags = {"Quickstart"="{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}","otherTagKey"="otherTagVal"}
   count = "${var.core["core_count"]}"
 }
 

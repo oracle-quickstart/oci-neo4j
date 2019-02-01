@@ -8,7 +8,7 @@ resource "oci_core_volume" "CoreVolume1" {
   compartment_id      = "${var.compartment_ocid}"
   display_name        = "Node ${format("%01d", count.index)} Volume 1"
   size_in_gbs         = 700
-  freeform_tags = {"Quickstart"="{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\"=\"byol\"}","otherTagKey"="otherTagVal"}
+  freeform_tags = {"Quickstart"="{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}","otherTagKey"="otherTagVal"}
 }
 
 resource "oci_core_volume_attachment" "NodeAttachment1" {
