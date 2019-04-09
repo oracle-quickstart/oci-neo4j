@@ -1,14 +1,10 @@
-# why isn't this in the vcn module outputs?
-data "oci_identity_availability_domains" "availability_domains" {
-  compartment_id = "${var.compartment_ocid}"
-}
 
 resource "oci_core_instance" "core" {
   display_name        = "core-${count.index}"
   compartment_id      = "${var.compartment_ocid}"
   availability_domain = "${lookup(data.oci_identity_availability_domains.availability_domains.availability_domains[0],"name")}"
   shape               = "${var.core["shape"]}"
-  subnet_id           = "${module.vcn.subnet_ids[0]}"
+  subnet_id           = "${oci_core_subnet.subnet.id}"
 
   source_details {
     source_id   = "${var.images[var.region]}"
@@ -16,7 +12,7 @@ resource "oci_core_instance" "core" {
   }
 
   create_vnic_details {
-    subnet_id      = "${module.vcn.subnet_ids[0]}"
+    subnet_id           = "${oci_core_subnet.subnet.id}"
     hostname_label = "core-${count.index}"
   }
 
