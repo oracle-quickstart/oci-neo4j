@@ -44,3 +44,4 @@ list="core-0:5000,core-1:5000,core-2:5000"
 sed -i -e "s/#causal_clustering.initial_discovery_members=localhost:5000,localhost:5001,localhost:5002/causal_clustering.initial_discovery_members=$list/g" /etc/neo4j/neo4j.conf
 
 systemctl start neo4j
+systemctl enable neo4j
