@@ -1,4 +1,3 @@
-
 resource "oci_core_instance" "core" {
   display_name        = "core-${count.index}"
   compartment_id      = "${var.compartment_ocid}"
@@ -12,7 +11,7 @@ resource "oci_core_instance" "core" {
   }
 
   create_vnic_details {
-    subnet_id           = "${oci_core_subnet.subnet.id}"
+    subnet_id      = "${oci_core_subnet.subnet.id}"
     hostname_label = "core-${count.index}"
   }
 
