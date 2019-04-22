@@ -29,8 +29,14 @@ variable "core" {
   default = {
     shape      = "VM.Standard2.4"
     core_count = 3
+  }
+}
 
-    #    username = "admin"
+variable "config" {
+  type = "map"
+
+  default = {
+    username = "admin"
     password = "admin"
   }
 }

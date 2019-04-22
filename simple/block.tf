@@ -9,9 +9,7 @@ resource "oci_core_volume" "CoreVolume1" {
   size_in_gbs         = 700
 
   freeform_tags = {
-    "Quickstart" = "{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}"
-
-    "otherTagKey" = "otherTagVal"
+    "quick-start" = "{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}"
   }
 }
 

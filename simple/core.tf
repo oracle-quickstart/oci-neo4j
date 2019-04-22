@@ -25,10 +25,12 @@ resource "oci_core_instance" "core" {
     )))}"
   }
 
-  freeform_tags = {
-    "Quickstart" = "{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}"
+  extended_metadata {
+    variable_object = "${jsonencode(var.config)}"
+  }
 
-    "otherTagKey" = "otherTagVal"
+  freeform_tags = {
+    "quick-start" = "{\"Deployment\":\"TF\", \"Publisher\":\"Neo4j\", \"Offer\":\"neo4j-enterprise\",\"Licence\":\"byol\"}"
   }
 
   count = "${var.core["core_count"]}"
