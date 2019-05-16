@@ -23,12 +23,12 @@ terraform apply # will prompt to continue
 
 The output of `terraform apply` should look like:
 ```
-Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 14 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-admin URL = http://132.145.215.17:8080
-URL = http://132.145.215.17:8088
-Worker server private IPs = 10.0.0.2
-Worker server public IPs = 132.145.215.17
+Core server private IPs = 10.0.0.3,10.0.0.2,10.0.0.4
+Core server public IPs = 150.136.212.76,129.213.91.51,132.145.183.234
 ```
+
+You can access the Neo4j browser at `http://<core_public_ip>:7474` with the default login `neo4j/neo4j`. You will be prompted to change the password at first login.
