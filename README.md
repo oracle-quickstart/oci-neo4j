@@ -1,5 +1,5 @@
-# oci-quickstart-neo4j
-This is a Terraform module that deploys [Neo4j](https://neo4j.com/product/) on [Oracle Cloud Infrastructure (OCI)](https://cloud.oracle.com/en_US/cloud-infrastructure).  It is developed jointly by Oracle and Neo4j.  For instructions on how to use this material and details on getting support from the vendor that maintains this material, please contact them directly.
+# oci-neo4j
+This is a Terraform module that deploys [Neo4j](https://neo4j.com/product/) on [Oracle Cloud Infrastructure (OCI)](https://cloud.oracle.com/en_US/cloud-infrastructure).  It is developed jointly by Oracle and Neo4j.
 
 ## Prerequisites
 First off you'll need to do some pre deploy setup.  That's all detailed [here](https://github.com/oracle/oci-quickstart-prerequisites).
