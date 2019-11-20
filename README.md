@@ -7,15 +7,15 @@ First off you'll need to do some pre deploy setup.  That's all detailed [here](h
 ## Clone the Module
 Now, you'll want a local copy of this repo by running:
 
-    git clone https://github.com/oracle/oci-quickstart-neo4j.git
+    git clone https://github.com/oracle-quickstart/oci-neo4j.git
 
 ## Deploy
 The TF templates here can be deployed by running the following commands:
 ```
-cd oci-quickstart-neo4j/simple
+cd oci-neo4j/simple
 terraform init
 terraform plan
-terraform apply # will prompt to continue
+terraform apply
 ```
 
 The output of `terraform apply` should look like:
